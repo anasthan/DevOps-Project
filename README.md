@@ -82,16 +82,16 @@ kubernetes_project/
 
 ```
 
-## Feature
-# Helm Charts Used in parameterized way
-# Network policies deployed for communication b/w namespaces - app, web and monitoring
-# Resource Limit
-# HPA 
+##### Feature
+###### Helm Charts Used in parameterized way
+###### Network policies deployed for communication b/w namespaces - app, web and monitoring
+###### Resource Limit
+###### HPA 
 
-## CD Deployment - Automation
-# Go to executores/ path
-# HELM Deployment : Run ./infrastructureInstall.sh <namespace> 
-   # For example :
+#### CD Deployment - Automation
+###### Go to executores/ path
+###### HELM Deployment : Run ./infrastructureInstall.sh <namespace> 
+   ###### For example :
      # ./infrastructureInstall.sh app
      #   ./infrastructureInstall.sh db
      #   ./infrastructureInstall.sh monitoring
