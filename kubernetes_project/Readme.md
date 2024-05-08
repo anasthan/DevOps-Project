@@ -2,7 +2,7 @@
 
 Kubernetes Setup for Flask Python Application
 
-# Presequitcs
+# Prerequisites
 Minikube, HELM, Docker
 
 ## Directory structure
