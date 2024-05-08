@@ -82,11 +82,11 @@ kubernetes_project/
 
 ```
 
-##### Feature
-###### Helm Charts Used in parameterized way
-###### Network policies deployed for communication b/w namespaces - app, web and monitoring
-###### Resource Limit
-###### HPA 
+#### Features
+###### 1. Helm Charts Used in parameterized way
+###### 2. Network policies deployed for communication b/w namespaces - app, web and monitoring
+###### 3. Resource Limit
+###### 4. HPA 
 
 #### CD Deployment - Automation
 ###### Go to executores/ path
