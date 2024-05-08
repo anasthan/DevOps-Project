@@ -2,7 +2,7 @@
 
 Local Docker Setup for Flask Python Application
 
-# Presequitcs
+# Prerequisites
 Docker
 
 ## Directory structure
