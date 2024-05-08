@@ -13,7 +13,7 @@ uninstall_charts() {
 
     case "$namespace" in
         "app")
-            charts=("../charts/app-tier --values ../values/web-values.yaml")
+            charts=("../charts/app-tier")
             ;;
         "db")
             charts=("../charts/db-tier")
