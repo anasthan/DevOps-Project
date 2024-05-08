@@ -2,7 +2,7 @@
 
 Local Docker Setup for Flask Python Application
 
-# Presequitcs
+# Prerequisites
 Docker
 
 ## Directory structure
@@ -48,7 +48,7 @@ python_project-web-1    | 172.22.0.1 - - [07/May/2024 12:18:40] "GET /ping HTTP/
 
 Kubernetes Setup for Flask Python Application
 
-# Presequitcs
+# Prerequisites
 Minikube, HELM, Docker
 
 ## Directory structure
