@@ -63,13 +63,13 @@ python_project/
 
 
 ## Output:
-```curl http://localhost:5000/ping```
+curl http://localhost:5000/ping
 # Response -->
-```{"id":"663a1c20c3e83b4fa36b2941","message":"Ping recorded"}```
+{"id":"663a1c20c3e83b4fa36b2941","message":"Ping recorded"}
 
 # Docker Log --->
-```python_project-web-1    | {"event": "PingReceived", "id": "663a1c20c3e83b4fa36b2941", "timestamp": "2024-05-07T12:18:40.744800"}
-python_project-web-1    | 172.22.0.1 - - [07/May/2024 12:18:40] "GET /ping HTTP/1.1" 200 –```
+python_project-web-1    | {"event": "PingReceived", "id": "663a1c20c3e83b4fa36b2941", "timestamp": "2024-05-07T12:18:40.744800"}
+python_project-web-1    | 172.22.0.1 - - [07/May/2024 12:18:40] "GET /ping HTTP/1.1" 200 –
 
 
 
