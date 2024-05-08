@@ -1,0 +1,4 @@
+apiVersion: v2
+name: elasticsearch
+description: A Helm chart for deploying Monitoring
+version: 0.1.0

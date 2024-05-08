@@ -1,0 +1,4 @@
+apiVersion: v2
+name: web
+description: A Helm chart for deploying the web application
+version: 0.1.0

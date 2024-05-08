@@ -1,0 +1,43 @@
+#System metric and custom metric using scrape
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+  namespace: monitoring
+data:
+  prometheus.yml: |
+    global:
+      scrape_interval: 15s
+    scrape_configs:
+      - job_name: 'flask-app'
+        static_configs:
+          - targets: ['web-service.app.svc.cluster.local:80']
+        metrics_path: /ping
+        relabel_configs:
+          - source_labels: [__address__]
+            target_label: __param_target
+            regex: (.*)
+            replacement: /ping
+          - source_labels: [__param_target]
+            target_label: instance
+            regex: (.*)
+            replacement: $1
+          - action: labelmap
+            regex: __meta_kubernetes_pod_label_(.+)
+          - target_label: __address__
+            replacement: web-service.app.svc.cluster.local:80
+
+
+        
+
+#Flask application is returning below JSON as output, you have two main options:
+#For example : {"id":"663a7d8b6f548143c80bca54","message":"Ping recorded"}
+
+#    Modify the /ping Endpoint to Return Metrics in Prometheus Format
+
+#    1. Update your Flask application to return metrics in the Prometheus format directly. This involves modifying your application code to generate metrics data in the Prometheus format.
+
+#    2. Use Prometheus Relabeling to Handle the JSON Response 
+
+#    Configure Prometheus to handle the JSON response from your /ping endpoint. This involves using relabeling configurations in your Prometheus configuration to extract relevant metrics from the JSON response.

@@ -1,0 +1,17 @@
+apiVersion: autoscaling/v1    # As I am using minikube which doesn't support v2beta version and there is no HPA CRDs in minikube else use autoscaling/v2beta2.
+kind: HorizontalPodAutoscaler
+metadata:
+  name: web-hpa
+  namespace: app
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: web
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      targetAverageUtilization: 50

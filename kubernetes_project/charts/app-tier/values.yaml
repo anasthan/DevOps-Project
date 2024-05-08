@@ -1,0 +1,8 @@
+image:
+  repository: anasthan/flaskapp
+  tag: latest
+
+mongo:
+  #uri: mongodb://mongodb-service:27017/
+  uri: mongodb://mongodb-service.db.svc.cluster.local:27017/
+
